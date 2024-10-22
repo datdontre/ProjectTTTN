@@ -1,0 +1,102 @@
+{
+   "loai": [
+        {"id": 1, "ten_loai": "Giày Sport", "slug": "giay_sport", "thu_tu": 0, "an_hien": 1},
+        {"id": 2, "ten_loai": "Giày Sneaker", "slug": "giay_sneaker", "thu_tu": 2, "an_hien": 1},
+        {"id": 3, "ten_loai": "Giày Lười", "slug": "giay_luoi", "thu_tu": 2, "an_hien": 1},
+        {"id": 4, "ten_loai": "Giày Tây", "slug": "giay_tay", "thu_tu": 2, "an_hien": 1}
+    ],
+    "san_pham": [
+        {   
+            "id": 1,
+            "ten": "Giày Thể Thao Nam Adias Runfalcon 2.0 GV9559",
+            "hinh": "images/1.jpg",
+            "loai": "Giày Sport nam",
+            "id_loai": 1, 
+            "gia": 2000000,
+            "ngay": "2024-10-8",
+            "luot_xem": 99,
+            "so_luong": 99,
+            "hot": 0,
+            "mo_ta": "<p><strong>Giày là một trong những thứ thiết yếu trong cuộc sống thường ngày. Trong cuộc sống đôi giày không những bảo vệ đôi chân chúng ta mà còn là thứ giúp tôn lên vẻ đẹp, sự trang trọng của mỗi người. Chúng tôi xin giới thiệu đến với bạn đôi giày này là một trong những sản phẩm tốt nhất đến với bạn</strong></p>"
+        },
+        {
+            "id": 2,
+            "ten": "Giày Sneaker Nam Dior B27 Black Pant Leather",
+            "hinh": "images/2.jpg",
+            "loai": "Giày sneaker nam",
+            "id_loai": 2,
+            "gia": 30000000,
+            "ngay": "2024-10-7",
+            "luot_xem": 101,
+            "so_luong": 99,
+            "hot": 1,
+            "mo_ta": "<p><strong>Giày là một trong những thứ thiết yếu trong cuộc sống thường ngày. Trong cuộc sống đôi giày không những bảo vệ đôi chân chúng ta mà còn là thứ giúp tôn lên vẻ đẹp, sự trang trọng của mỗi người. Chúng tôi xin giới thiệu đến với bạn đôi giày này là một trong những sản phẩm tốt nhất đến với bạn</strong></p>"
+
+        },
+        {
+            "id": 3,
+            "ten": "Giày Sneaker Nam Dior B27 High ‘Dior Oblique Galaxy White’",
+            "hinh": "images/3.jpg",
+            "loai": "Giày sneaker nam",
+            "id_loai": 2,
+            "gia": 15500000,
+            "ngay": "2024-10-7",
+            "luot_xem": 99,
+            "so_luong": 99,
+            "hot": 1,
+            "mo_ta": "<p><strong>Giày là một trong những thứ thiết yếu trong cuộc sống thường ngày. Trong cuộc sống đôi giày không những bảo vệ đôi chân chúng ta mà còn là thứ giúp tôn lên vẻ đẹp, sự trang trọng của mỗi người. Chúng tôi xin giới thiệu đến với bạn đôi giày này là một trong những sản phẩm tốt nhất đến với bạn</strong></p>"
+        },
+        {
+            "id": 4,
+            "ten": "Giày Sneaker Nữ Dior Star White Calfskin And Suede",
+            "hinh": "images/4.jpg",
+            "loai": "Giày sneaker nữ",
+            "id_loai": 2,
+            "gia": 15500000,
+            "ngay": "2024-10-7",
+            "luot_xem": 99,
+            "so_luong": 99,
+            "hot": 0,
+            "mo_ta": "<p><strong>Giày là một trong những thứ thiết yếu trong cuộc sống thường ngày. Trong cuộc sống đôi giày không những bảo vệ đôi chân chúng ta mà còn là thứ giúp tôn lên vẻ đẹp, sự trang trọng của mỗi người. Chúng tôi xin giới thiệu đến với bạn đôi giày này là một trong những sản phẩm tốt nhất đến với bạn</strong></p>"
+        },
+        {
+            "id": 5,
+            "ten": "Giày Sneaker Nữ Adias Superstar Pulse Blue GV8978 Màu Trắng",
+            "hinh": "images/5.jpg",
+            "loai": "Giày sneaker nữ",
+            "id_loai": 2,
+            "gia": 1950000,
+            "ngay": "2024-10-7",
+            "luot_xem": 99,
+            "so_luong": 99,
+            "hot": 0,
+            "mo_ta": "<p><strong>Giày là một trong những thứ thiết yếu trong cuộc sống thường ngày. Trong cuộc sống đôi giày không những bảo vệ đôi chân chúng ta mà còn là thứ giúp tôn lên vẻ đẹp, sự trang trọng của mỗi người. Chúng tôi xin giới thiệu đến với bạn đôi giày này là một trong những sản phẩm tốt nhất đến với bạn</strong></p>"
+        },
+        {
+            "id": 6,
+            "ten": "Giày Lười Nữ Dior Women's Loafer KDB749ACA 24W Trắng Kem",
+            "hinh": "images/6.jpg",
+            "loai": "Giày lười nữ",
+            "id_loai": 3,
+            "gia": 3999999,
+            "ngay": "2024-10-8",
+            "luot_xem": 99,
+            "so_luong": 99,
+            "hot": 1,
+            "mo_ta": "<p><strong>Giày là một trong những thứ thiết yếu trong cuộc sống thường ngày. Trong cuộc sống đôi giày không những bảo vệ đôi chân chúng ta mà còn là thứ giúp tôn lên vẻ đẹp, sự trang trọng của mỗi người. Chúng tôi xin giới thiệu đến với bạn đôi giày này là một trong những sản phẩm tốt nhất đến với bạn</strong></p>"
+        },
+        {
+            "id": 7,
+            "ten": "Giày Tây Dior Timeless Derby Shoe Black Polished Calfskin 3DE305YON_H969 Đen",
+            "hinh": "images/7.jpg",
+            "loai": "Giày tây nam",
+            "id_loai": 4,
+            "gia": 21890000,
+            "ngay": "2024-10-8",
+            "luot_xem": 99,
+            "so_luong": 99,
+            "hot": 1,
+            "mo_ta": "<p><strong>Giày là một trong những thứ thiết yếu trong cuộc sống thường ngày. Trong cuộc sống đôi giày không những bảo vệ đôi chân chúng ta mà còn là thứ giúp tôn lên vẻ đẹp, sự trang trọng của mỗi người. Chúng tôi xin giới thiệu đến với bạn đôi giày này là một trong những sản phẩm tốt nhất đến với bạn</strong></p>"
+        }
+    ]
+}
