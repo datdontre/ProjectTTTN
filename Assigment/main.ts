@@ -116,12 +116,17 @@ export const lay_sp_tu_id = async (id) => {
                     <button type="button" class="btn btn-outline-primary">42</button>
                 </div>
             </p>
-            <button class="btn btn-primary">Thêm vào giỏ hàng</button>
-            <button class="btn btn-danger">Mua ngay</button>
+            <div class="d-flex">
+                <a class="btn btn-primary me-2" id="add-to-cart-${sp.id}" href="giohang.html">Thêm vào giỏ hàng</a>
+                <a class="btn btn-danger" href="top">Mua ngay</a>
+            </div>  
             </div>
         </div>
     </div>`;
-     })
+    })
+    document.getElementById(`add-to-cart-${sp.id}`).addEventListener("click", () => {
+        themVaoGioHang(sp);
+    });
     return str;
 }
 
@@ -162,6 +167,28 @@ export const lay_sp_xem_nhieu = async (so_sp=6) => {
     sp_arr.forEach( sp => str+= code_mot_sp(sp));
     return str;
 }
+
+const gioHang: ISan_Pham[] = JSON.parse(localStorage.getItem('gioHang') || '[]');
+
+export const hienThiGioHang = () => {
+    const cartDataContainer = document.getElementById('cart-data');
+    const emptyMessage = "Giỏ hàng của bạn đang trống.";
+
+    if (gioHang.length === 0) {
+        cartDataContainer.innerHTML = `<p>${emptyMessage}</p>`;
+        return;
+    }
+
+    cartDataContainer.innerHTML = gioHang.map(sp => `
+        <div>
+            <h5>${sp.ten}</h5>
+            <p>Giá: ${Number(sp.gia).toLocaleString("vi")} vn₫</p>
+            <button class="btn btn-danger">Xóa</button>
+        </div>
+    `).join('');
+};
+
+
 /*const sanpham_arr:TGiay[];
 sanpham_arr = [{   
     id: 1,

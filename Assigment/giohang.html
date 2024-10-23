@@ -38,8 +38,11 @@
     </div>
     <main class="mb-4">
       <selection id="lay_sp_tu_id">
-        <div id="data">
-
+        <div class="container">
+            <h2>Giỏ hàng</h2>
+            <div id="cart-data">
+                <p>Giỏ hàng của bạn đang trống.</p>
+            </div>
         </div>
       </selection>
     </main>
@@ -107,14 +110,7 @@
 </html>
 <script src="main.js"></script>
 <script type="module">
-  import { lay_loai, lay_sp_tu_id} from './js/main.js';
-      let params = new URLSearchParams(location.search);
-      let id = Number(params.get("id")) ; 
+    import { lay_loai, hienThiGioHang} from './js/main.js';
     document.querySelector("#menu").innerHTML = await lay_loai();
-    document.querySelector("#lay_sp_tu_id #data").innerHTML = await lay_sp_tu_id(id);
-    const sp = { id: 1, ten: "Tên sản phẩm", gia: 100000 }; // Thay đổi thông tin sản phẩm
-
-        document.getElementById(`add-to-cart-${sp.id}`).addEventListener("click", () => {
-            themVaoGioHang(sp);
-        });
+    await hienThiGioHang();
 </script>
