@@ -112,9 +112,4 @@
       let id = Number(params.get("id")) ; 
     document.querySelector("#menu").innerHTML = await lay_loai();
     document.querySelector("#lay_sp_tu_id #data").innerHTML = await lay_sp_tu_id(id);
-    const sp = { id: 1, ten: "Tên sản phẩm", gia: 100000 }; // Thay đổi thông tin sản phẩm
-
-        document.getElementById(`add-to-cart-${sp.id}`).addEventListener("click", () => {
-            themVaoGioHang(sp);
-        });
 </script>

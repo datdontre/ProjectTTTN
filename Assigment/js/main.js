@@ -126,21 +126,7 @@ export const hienThiGioHang = () => {
         <div>
             <h5>${sp.ten}</h5>
             <p>Giá: ${Number(sp.gia).toLocaleString("vi")} vn₫</p>
-            <button class="btn btn-danger" onclick="xoaKhoiGioHang(${sp.id})">Xóa</button>
+            <button class="btn btn-danger">Xóa</button>
         </div>
     `).join('');
-};
-export const themVaoGioHang = (sanPham) => {
-    gioHang.push(sanPham);
-    localStorage.setItem('gioHang', JSON.stringify(gioHang));
-    alert(`${sanPham.ten} đã được thêm vào giỏ hàng!`);
-    hienThiGioHang();
-};
-export const xoaKhoiGioHang = (id) => {
-    const index = gioHang.findIndex(sp => sp.id === id);
-    if (index !== -1) {
-        gioHang.splice(index, 1);
-        localStorage.setItem('gioHang', JSON.stringify(gioHang));
-        hienThiGioHang();
-    }
 };

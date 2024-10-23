@@ -124,9 +124,6 @@ export const lay_sp_tu_id = async (id) => {
         </div>
     </div>`;
     })
-    document.getElementById(`add-to-cart-${sp.id}`).addEventListener("click", () => {
-        themVaoGioHang(sp);
-    });
     return str;
 }
 
