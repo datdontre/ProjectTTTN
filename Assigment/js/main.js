@@ -4,7 +4,7 @@ export const lay_loai = async () => {
     loai_arr = await fetch(URL_API + `/loai`).then(res => res.json()).then(data => { return data; });
     let str = `<li class="nav-item"><a class="nav-link fw-bold" href="main.html">Trang Chủ</a></li>`;
     loai_arr.forEach(loai => {
-        str += `<li id="${loai.ten_loai} " class="nav-item"><a class="nav-link" href = "sptrongloai.html?id=${loai.id}">${loai.ten_loai}</a></li>`;
+        str += `<li id="${loai.ten_loai}" class="nav-item"><a class="nav-link" href = "sptrongloai.html?id=${loai.id}">${loai.ten_loai}</a></li>`;
     });
     console.log(loai_arr);
     return `<ul class="navbar-nav">${str}</ul>`;
@@ -22,7 +22,7 @@ export const lay_ten_loai = async (id) => {
 };
 const code_mot_sp = (sp) => {
     return `    
-    <div class="col-3 mb-4">
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div class="card">
                 <img src="${sp.hinh}" class="card-img-top img-fluid" alt="${sp.ten}">
                 <div class="card-body">
@@ -38,6 +38,7 @@ export const lay_sp_trong_loai = async (id) => {
     let sp_arr;
     let url = URL_API + `/san_pham?id_loai=${id}`;
     sp_arr = await fetch(url).then(res => res.json()).then(d => d);
+    console.log(sp_arr);
     let str = ``;
     sp_arr.forEach(sp => str += code_mot_sp(sp));
     return str;
@@ -46,32 +47,35 @@ export const lay_sp_tu_id = async (id) => {
     let sp_arr;
     let url = URL_API + `/san_pham?id=${id}`;
     sp_arr = await fetch(url).then(res => res.json()).then(d => d);
+    console.log(sp_arr);
     let str = ``;
-    sp_arr.forEach(sp => str += ` <div class="container mt-5">
-        <div class="row">
-            <!-- Phần trái: Hiển thị hình ảnh sản phẩm -->
-            <div class="col-md-6">
-                <img src="${sp.hinh}" alt="${sp.ten}" class="img-fluid">
-            </div>
-            <!-- Phần phải: Thông tin chi tiết sản phẩm -->
-            <div class="col-md-6">
-                <h2>${sp.ten}</h2>
-                <p>${sp.mo_ta}</p>
-                <p>Giá: ${Number(sp.gia).toLocaleString("vi")} vn₫</p>
-                <p>Kích thước: 
-                    <div class="btn-group" role="group" aria-label="Kích thước giày">
-                        <button type="button" class="btn btn-outline-primary">38</button>
-                        <button type="button" class="btn btn-outline-primary">39</button>
-                        <button type="button" class="btn btn-outline-primary">40</button>
-                        <button type="button" class="btn btn-outline-primary">41</button>
-                        <button type="button" class="btn btn-outline-primary">42</button>
-                    </div>
-                </p>
-                <button class="btn btn-primary">Thêm vào giỏ hàng</button>
-                <button class="btn btn-danger">Mua ngay</button>
+    sp_arr.forEach(sp => {
+        str += `<div class="container mt-5">
+    <div class="row">
+        <!-- Phần trái: Hiển thị hình ảnh sản phẩm -->
+        <div class="col-md-6">
+            <img src="${sp.hinh}" alt="${sp.ten}" class="img-fluid">
+        </div>
+        <!-- Phần phải: Thông tin chi tiết sản phẩm -->
+        <div class="col-md-6">
+            <h2>${sp.ten}</h2>
+            <p>${sp.mo_ta}</p>
+            <p>Giá: ${Number(sp.gia).toLocaleString("vi")} vn₫</p>
+            <p>Kích thước: 
+                <div class="btn-group" role="group" aria-label="Kích thước giày">
+                    <button type="button" class="btn btn-outline-primary">38</button>
+                    <button type="button" class="btn btn-outline-primary">39</button>
+                    <button type="button" class="btn btn-outline-primary">40</button>
+                    <button type="button" class="btn btn-outline-primary">41</button>
+                    <button type="button" class="btn btn-outline-primary">42</button>
+                </div>
+            </p>
+            <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+            <button class="btn btn-danger">Mua ngay</button>
             </div>
         </div>
-    </div>`);
+    </div>`;
+    });
     return str;
 };
 export const lay_sp = async () => {
